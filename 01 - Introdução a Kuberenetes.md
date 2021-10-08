@@ -4,7 +4,7 @@ Kubernetes é um plataforma de código aberto, portável e extensiva para o gere
 
 ### O que é um cluster ?
 
-<div style="text-align:center"><img src="https://dytvr9ot2sszz.cloudfront.net/wp-content/uploads/2020/05/k8saks1-1.jpg" /></div></br>
+<div style="text-align:center"><img src="https://github.com/rosthansilva/HowToAKS/blob/master/img/kubernetes-constructs-concepts-architecture.jpg" /></div></br>
 
 Um cluster é um numero "X" de máquinas que são responsáveis pelo serviço do kubernetes e cada um de seus componentes. Para entender melhor o kubernetes precisamos conhecer cada um de seus componentes e serviços.
 
