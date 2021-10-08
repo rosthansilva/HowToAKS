@@ -7,9 +7,23 @@ com o ACR temos uma forma propria de lidar com as imagens e buildar seu codigo.
 
 ## Criando um Registry
 
-Para criação de um registry digite
+Para criação de um registry digite :
 
 ```
+#criando um ACR com SKU Basico, para mais informações sobre os niveis de SKU consulte o link : [Acr Niveis de Serviço](https://docs.microsoft.com/pt-br/azure/container-registry/container-registry-skus)
 az acr create --ressource-group RgAcr --nome AcrDoMau --sku Basic --admin-enabled true
 ```
-lala
+
+buildando uma imagem :
+
+
+```
+az acr build --registry AcrDoMau --image img:latest .
+
+```
+
+Criando seu primeiro deployment :
+
+```
+kubectl run app --image=AcrDoMau.azureacr.io/img:latest --replicas=3 --port=80
+```
