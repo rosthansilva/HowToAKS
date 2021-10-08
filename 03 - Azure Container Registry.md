@@ -18,6 +18,8 @@ buildando uma imagem :
 
 
 ```
+#Acr tasks é uma feature da azure que permite que você builde seus containers sem a necessidade de ter o docker instalado em sua máquina. Salve seu Dockerfile em um diretório e builde sua imagem direto no azure.
+
 az acr build --registry AcrDoMau --image img:latest .
 
 ```
