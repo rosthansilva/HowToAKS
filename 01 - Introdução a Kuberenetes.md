@@ -2,7 +2,7 @@
 
 Kubernetes é um plataforma de código aberto, portável e extensiva para o gerenciamento de cargas de trabalho e serviços distribuídos em contêineres. É uma evolução do conceito de container voltado para cargas de trabalhos e modelos de Arquitetura de serviços mais exigentes.
 
-### O que é um cluster ?
+## O que é um cluster ?
 
 <div style="text-align:center"><img src="https://github.com/rosthansilva/HowToAKS/blob/master/img/kubernetes-constructs-concepts-architecture.jpg" /></div></br>
 
