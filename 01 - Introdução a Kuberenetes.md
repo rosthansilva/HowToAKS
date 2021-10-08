@@ -29,19 +29,24 @@ Estado de um conainer armazenado
 local de armazenamento de imagens para utilização com docker e kubernets
 
 **Pod**
+
 Um ou mais containers que compartilham o mesmo storage e rede paraformar um serviço estável.
 
 **Services**
+
 Service é o ponto de exposição de uma aplicação rodando. Com isso podemos expor nossos front ends para nossos clientes.
 
 **Deployment**
+
 Consiste em um numero de pods rodando em ReplicaSet em um arquivo yaml declarativo.
 
 **ReplicaSet**
+
 Numero de replicas permitidas no cluster Kubernetes pre configuradas.
 
 
 **Api Server**
+
 O servidor de API é um componente da Camada de gerenciamento do Kubernetes que expõe a API do Kubernetes. O servidor de API é o front end para a camada de gerenciamento do Kubernetes.
 
 A principal implementação de um servidor de API do Kubernetes é kube-apiserver. O kube-apiserver foi projetado para ser escalonado horizontalmente — ou seja, ele pode ser escalado com a implantação de mais instâncias. Você pode executar várias instâncias do kube-apiserver e balancear (balanceamento de carga, etc) o tráfego entre essas instâncias.
