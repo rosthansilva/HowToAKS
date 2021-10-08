@@ -60,11 +60,13 @@ Se o seu cluster Kubernetes usa etcd como seu armazenamento de apoio, certifique
 Você pode encontrar informações detalhadas sobre o etcd na seção oficial da documentação.
 
 **kube-scheduler**
+
 Componente da camada de gerenciamento que observa os pods recém-criados sem nenhum nó atribuído, e seleciona um nó para executá-los.
 
 Os fatores levados em consideração para as decisões de agendamento incluem: requisitos de recursos individuais e coletivos, hardware/software/política de restrições, especificações de afinidade e antiafinidade, localidade de dados, interferência entre cargas de trabalho, e prazos.
 
 **kube-controller-manager**
+
 Componente da camada de gerenciamento que executa os processos de controlador.
 
 Logicamente, cada controlador está em um processo separado, mas para reduzir a complexidade, eles todos são compilados num único binário e executam em um processo único.
