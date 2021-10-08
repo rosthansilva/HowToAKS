@@ -82,3 +82,21 @@ Complementos (addons) usam recursos do Kubernetes (DaemonSet, Deployment, etc) p
 Alguns addons selecionados são descritos abaixo; para uma lista estendida dos addons disponíveis, por favor consulte Addons.
 
 **DNS**
+
+Embora os outros complementos não sejam estritamente necessários, todos os clusters do Kubernetes devem ter um DNS do cluster, já que muitos exemplos dependem disso.
+
+O DNS do cluster é um servidor DNS, além de outros servidores DNS em seu ambiente, que fornece registros DNS para serviços do Kubernetes.
+
+Os contêineres iniciados pelo Kubernetes incluem automaticamente esse servidor DNS em suas pesquisas DNS.
+
+**Web UI (Dashboard)**
+
+Dashboard é uma interface de usuário Web, de uso geral, para clusters do Kubernetes. Ele permite que os usuários gerenciem e solucionem problemas de aplicações em execução no cluster, bem como o próprio cluster.
+
+**Monitoramento de recursos do contêiner**
+
+Monitoramento de recursos do contêiner registra métricas de série temporal genéricas sobre os contêineres em um banco de dados central e fornece uma interface de usuário para navegar por esses dados.
+
+**Logging a nivel do cluster**
+
+Um mecanismo de logging a nível do cluster é responsável por guardar os logs dos contêineres em um armazenamento central de logs com um interface para navegação/pesquisa.
