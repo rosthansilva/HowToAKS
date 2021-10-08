@@ -8,7 +8,37 @@ Kubernetes é um plataforma de código aberto, portável e extensiva para o gere
 
 Um cluster é um numero "X" de máquinas que são responsáveis pelo serviço do kubernetes e cada um de seus componentes. Para entender melhor o kubernetes precisamos conhecer cada um de seus componentes e serviços.
 
-Master
+## Componentes de um cluster Kubernetes
+
+**Master Nodes**
+
+Centro de controle do kubernetes. Não necessáriamente é um só, sendo recomendado que se tenha 3 masters em seu clusters para garania de disponibilidade. É neles que residem o chamado control plane, as apis de contorle e rotinas de comando do kubernetes para os demais nodes do cluster.
+
+**Worker Nodes**
+Os Worker nodes interagem com o master e tem por objetivo rodar os chamados pods. Não tem o protagonismo ou a complexidade de sustentação dos master nodes mas não são menos importantes.
+
+**Container**
+Conteiner pode ser visto como uma unidade minima onde se roda um serviço criado em uma imagem
+
+**Imagem**
+
+Estado de um conainer armazenado
+
+**Registry**
+
+local de armazenamento de imagens para utilização com docker e kubernets
+
+**Pod**
+Um ou mais containers que compartilham o mesmo storage e rede paraformar um serviço estável.
+
+**Services**
+Service é o ponto de exposição de uma aplicação rodando. Com isso podemos expor nossos front ends para nossos clientes.
+
+**Deployment**
+Consiste em um numero de pods rodando em ReplicaSet em um arquivo yaml declarativo.
+
+**ReplicaSet**
+Numero de replicas permitidas no cluster Kubernetes pre configuradas.
 
 
 **Api Server**
