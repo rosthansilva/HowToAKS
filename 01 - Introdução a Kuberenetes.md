@@ -15,6 +15,7 @@ Um cluster é um numero "X" de máquinas que são responsáveis pelo serviço do
 Centro de controle do kubernetes. Não necessáriamente é um só, sendo recomendado que se tenha 3 masters em seu clusters para garania de disponibilidade. É neles que residem o chamado control plane, as apis de contorle e rotinas de comando do kubernetes para os demais nodes do cluster.
 
 **Worker Nodes**
+
 Os Worker nodes interagem com o master e tem por objetivo rodar os chamados pods. Não tem o protagonismo ou a complexidade de sustentação dos master nodes mas não são menos importantes.
 
 **Container**
