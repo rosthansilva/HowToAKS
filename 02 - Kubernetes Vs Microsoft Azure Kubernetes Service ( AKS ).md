@@ -16,7 +16,11 @@ Monitoração :
    - A saúde e garantia de continuidade do cluster é gerenciado pela microsoft.
 
 
-##Deploy rapido de um clusters
+## Easy as F*
+
+Não há duvida alguma que a pior parte do K8s ( Kubernetes ) é mante-lo. Fazer backup do etcd e manter seus updates é muito difícil. Além de toda essa vantagem com a gestão da microsoft ela ainda nos da a possibilidade de ter um cluster onde eu não pago nem vejo o control plane ... Isso é maravilhoso e muito diferente se comparado a outras soluções como o próprio GKE do google. Com AKS não preciso mais me preocupar em colocar o etcd externo e nem fazer backup do mesmo. Eu só preciso ter o kubectl ( Comando que controla o kubernetes) configurado e utilizar o meu cluster pra rodar meus deploys.
+
+## Deploy rapido de um clusters
 
 Abra o azure cloudshell em sua conta Azure e digite as seguintes linhas :
 
@@ -39,5 +43,5 @@ export ServicePrincipal="SeuServicePrincipal"
 export Secret="ClientSecret"
 
 az aks create --ressource-group $RG --name $ClusterName --node-count $Nodes --enable-addons $addons --generate-ssh-keys --service-principal $ServicePrincipal --client-secret $ClientSecret
-az
-```    
+
+```
