@@ -12,3 +12,4 @@ Para criação de um registry digite
 ```
 az acr create --ressource-group RgAcr --nome AcrDoMau --sku Basic --admin-enabled true
 ```
+lala
