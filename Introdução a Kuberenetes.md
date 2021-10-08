@@ -19,7 +19,7 @@ Se o seu cluster Kubernetes usa etcd como seu armazenamento de apoio, certifique
 
 Você pode encontrar informações detalhadas sobre o etcd na seção oficial da documentação.
 
-** kube-scheduler **
+**kube-scheduler**
 Componente da camada de gerenciamento que observa os pods recém-criados sem nenhum nó atribuído, e seleciona um nó para executá-los.
 
 Os fatores levados em consideração para as decisões de agendamento incluem: requisitos de recursos individuais e coletivos, hardware/software/política de restrições, especificações de afinidade e antiafinidade, localidade de dados, interferência entre cargas de trabalho, e prazos.
@@ -52,7 +52,7 @@ Controlador de rota: para configurar rotas na infraestrutura de nuvem subjacente
 Controlador de serviço: Para criar, atualizar e excluir balanceadores de carga do provedor de nuvem.
 
 
-##Node Components
+## Node Components
 
 Os componentes de nó são executados em todos os nós, mantendo os pods em execução e fornecendo o ambiente de execução do Kubernetes.
 
