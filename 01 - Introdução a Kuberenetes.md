@@ -36,7 +36,7 @@ Um ou mais containers que compartilham o mesmo storage e rede paraformar um serv
 
 Service é o ponto de exposição de uma aplicação rodando. Com isso podemos expor nossos front ends para nossos clientes.
 
-##Configs Comuns
+## Configs Comuns
 
 **Deployment**
 
@@ -47,7 +47,7 @@ Consiste em um numero de pods rodando em ReplicaSet em um arquivo yaml declarati
 Numero de replicas permitidas no cluster Kubernetes pre configuradas.
 
 
-##Componentes do Cluster
+## Componentes do Cluster
 **Api Server**
 
 O servidor de API é um componente da Camada de gerenciamento do Kubernetes que expõe a API do Kubernetes. O servidor de API é o front end para a camada de gerenciamento do Kubernetes.
