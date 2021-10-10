@@ -18,3 +18,14 @@ Os acessos de usuário são gerenciados externamente via cliente SSO. Aplicaçõ
 4. Na fase de adimissão, o usuário com a devida permissão de execução terá sua mudança aplicada ao estado atual do kubernetes podendo criar novos deployments, services e etc.
 
 >'Exaplanação' : O Kublet é o agente em cada um dos nodes que se comunica com o API server no control plane e envia o sinal para o runtime ( Containerd, CRI-O ou Docker em versões mais antigas )
+
+##Kubeconfig
+
+O centro de permissionamento de nosso clister esta no nosso arquivo Kubeconfig. Esse arquivo fica no home do usuário que tem permissão de execução em nosso cluster. O Kubeconfig é responsável por nos dar contextos de execução. Cada contexto representa um diferente cluster no qual poderá fazer alteração.
+
+Imagine o seguinte cenário :
+
+ Temos 2 clusters cl01 e cl02 devidamente configurado no Azure AKS e eu preciso executar deployments em ambos.
+ Rodando *kubectl config get-clusters* vejo que tenho somente cl01 configurado devidamente na minha sessão de shell atual.
+
+ Com o comando *az aks list --query "[?contains(name, 'cl')].{Name:name,State:properties.state}"*  
