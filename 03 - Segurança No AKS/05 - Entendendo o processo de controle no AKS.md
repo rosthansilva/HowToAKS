@@ -44,3 +44,27 @@ Imagine o seguinte cenário :
  ]
 
  ```
+Confirmado que o segundo cluster esta ativo, podemos adiciona-lo de forma direta ao nosso Kubeconfig através do comando :
+
+```
+az aks get-credentials --ressource-group SeuRgDoAKS --name cl02
+Merged "cl02" as current context in /home/rosthan/.kube/config
+```
+
+Agora conseguimos listar nossos clusters e veremos 2 clusters ao inves de 1
+e ao fim de nosso kubeconfig vemos que um novo contexto foi adicionado ( cat ~/.kube/config  para ver o contexto)
+Para executar ações no segundo cluster precisamos alterar o contexto :
+```
+#Exibe contexto atual, no caso será o segundo cluster pois o contexto é açterado após a adição de um novo cluster
+kubectl config current context
+cl02
+
+#Altera contexto para deployments no cl01
+Kubectl config use-context cl01
+
+#Exibe contextos existentes
+Kubectl config get-context
+
+```
+
+Dessa forma, o kubeconfig esta liberado e qualquer pessoa pode ter acesso ao mesmo e fazer alterações no seu cluster Kubernetes. Para controle do cluster temos duas opções nativas do azure. São elas, azureAD e Azure Rbac ( Veremos mais a frente). 
