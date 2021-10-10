@@ -16,3 +16,5 @@ Os acessos de usuário são gerenciados externamente via cliente SSO. Aplicaçõ
 2. Na fase de 'Autenticação' o ApiServer entenden quem é ou qual aplicação deseja fazer alteração ( Via Token )
 3. Na fase de autorização é checado se o 'usuário' ou 'app' tem permissão para executar a ação desejada.
 4. Na fase de adimissão, o usuário com a devida permissão de execução terá sua mudança aplicada ao estado atual do kubernetes podendo criar novos deployments, services e etc.
+
+>'Exaplanação' : o kublet é o agente em cada um dos nodes que se comunica com o API server no control plane e envia o sinal para o runtime ( Containerd, CRI-O ou Docker em versões mais antigas )
