@@ -69,4 +69,4 @@ Criando um cluster com 20 nodes :
 Acesse [cdir.xyz](https://cidr.xyz/)
 
 Altere o barramento até que tenha a quantidade desejada de endereços :
-No nosso caso, precisamos de 651 endereços, com /23 temos 512, um numero próximo porém não é o bastante, o que nos diz que o próximo barramento suportará a quantidade de ips. Subindo um octeto a mais temos /22 que por sua vez comporta 1024 ips e é a opção que utilizaríamos em situação real no contexto de ip antes citado.
+No nosso caso, precisamos de 651 endereços, com /23 temos 512 ips ... um numero próximo porém não é o bastante, o que nos diz que o próximo barramento suportará a quantidade de ips. Subindo um octeto a mais temos /22 que por sua vez comporta 1024 ips e é a opção que utilizaríamos em situação real no contexto de ip antes citado.
