@@ -10,9 +10,9 @@ Kubenet é um plugin de configuração de rede do Kubernetes no AKS. Nele, nodes
 
 ```
  Beneficios do Kubenet
- - Mais ips para os Pods evitando limitações de rede
- - Trafego nateado torna gestão e configuração mais simples
- - O Numero máximo de pods que podemos rodar em um cluster em kubnetmode é 110 ( Uma rede /24 para os nodes Conseguimos rodar 27.610 pods. Diferente do AzureCNI, onde com o mesmo barramento conseguiriamos rodar 240 pods somente.  )
+ - Mais ips para os Pods evitando limitações de rede;
+ - Trafego nateado torna gestão e configuração mais simples;
+ - O Numero máximo de pods que podemos rodar em um cluster em kubnetmode é 110 ( Uma rede /24 para os nodes Conseguimos rodar 27.610 pods. Diferente do AzureCNI, onde com o mesmo barramento conseguiriamos rodar 240 pods somente.  ).
 
 ```
 
