@@ -2,11 +2,11 @@
 
   Service Principal é um gestor de identidades do Azure que permite a aplicações como o o k8s a criar recursos no Azure. Dentro do contexto do azure, o service principal permite ao kubernetes ter mais de um cluster gerenciado, multiplicar seu numero de nodes e ter acesso restgrito ou irrestrito ao ACR.
 
-  1 - Para criar um service principal vá em no menu e pesquise por Azure Active Directory ( AzureAD ).
-  2 - No menu a esquerda clique em **APP Registration**
-  3 - Clique em New Rergistration.
-  4 - Digite um nome e selecione quem terá acesso a essa API ou aplicação
-  5 - Finalize e é isso :)
+  1. Para criar um service principal vá em no menu e pesquise por Azure Active Directory ( AzureAD ).
+  2. No menu a esquerda clique em **APP Registration**
+  3. Clique em New Rergistration.
+  4. Digite um nome e selecione quem terá acesso a essa API ou aplicação
+  5. Finalize e é isso :)
 
 Agra com nosso service pincipal configurado podemos criar novos secrets para nossa aplicação no K8s.
 Em certificates and secrets podemos fazer agora upload de sertificados e criar secrets.
