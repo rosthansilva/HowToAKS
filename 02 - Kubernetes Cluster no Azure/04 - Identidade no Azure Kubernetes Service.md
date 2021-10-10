@@ -8,8 +8,8 @@
   4. Digite um nome e selecione quem terá acesso a essa API ou aplicação
   5. Finalize e é isso :)
 
-Agra com nosso service pincipal configurado podemos criar novos secrets para nossa aplicação no K8s.
-Em certificates and secrets podemos fazer agora upload de sertificados e criar secrets.
+Agora com nosso service pincipal configurado podemos criar novos secrets para nossa aplicação no K8s.
+Em certificates and secrets podemos fazer agora upload de certificados e criar secrets.
 
 
 ## Criando Service Principal via AzCli
