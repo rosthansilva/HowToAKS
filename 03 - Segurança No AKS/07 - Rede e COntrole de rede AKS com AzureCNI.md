@@ -54,3 +54,51 @@ Vamos criar o seguinte cenário no nosso cluster :
 - Vamos permitir consultas de DNS do namespace App
 
 > é parte das melhores praticas criar uma politica que bloqueie todo o trafego de entrada e saída do nosso cluster e em seguida liberar o necessário se baseando em tags ( app=Web, app=DB, app=Api )
+
+Hans On
+
+```
+#Conecte-se ao cloudshell já com seu cluster criado e no contexto correto e crie um Namespace
+kubectl crate namespace App
+
+#use o contetxo desse name space
+kubectl config set-context --current --namespace App
+
+#Agora, todos os seus comandos irão afetar somente esse namespace.
+#Agora vamos criar o arquivo yaml do nosso ambiente
+ -- config.yaml
+apiVersion: apps/v1
+kind: deployment
+metadata: db
+  name: db
+  lebels:
+    app: db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      app: db
+    spec:
+      containers:
+      - name: couchdb
+        image: couchdb:2.3.0
+        ports:
+        - containerPort: 5984
+---
+apiVersion: apps/v1
+kind: Service
+metadata: db
+  name: db
+spec:
+  selector:
+    app: db
+  ports:
+    - name : db
+    port: 15984
+    targetPort: 5984
+  type: ClusterIp
+
+```
