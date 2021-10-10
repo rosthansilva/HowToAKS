@@ -46,7 +46,9 @@ Vamos criar o seguinte cenário no nosso cluster :
   - Webapp
   - Api
   - DB
-- vamos abrir as portas necessárias de cada pod 
+- vamos abrir as portas necessárias de cada pod
   - Vamos criar um service para DB com ClusterIP (:15984)
   - Vamos criar um service com um clusterIP (:8080) para Api
   - Vamos Criar um loadbalance para o Pod web (:80)
+- Vamos separar nosso ambiente em 2 Namespaces ( Kube-system | App )
+- Vamos permitir consultas de DNS do namespace App
