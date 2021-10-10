@@ -28,4 +28,19 @@ Imagine o seguinte cenário :
  Temos 2 clusters cl01 e cl02 devidamente configurado no Azure AKS e eu preciso executar deployments em ambos.
  Rodando *kubectl config get-clusters* vejo que tenho somente cl01 configurado devidamente na minha sessão de shell atual.
 
- Com o comando **az aks list --query "[?contains(name, 'cl')].{Name:name,State:properties.state}"**
+ Com o comando **az aks list --query "[?contains(name, 'cl')].{Name:name,State:properties.state}"** nós conseguimos a informação dos nossos clusters atuais no azure.
+
+
+ ```
+ [
+  {
+    "name": "cl01",
+    "State": null
+  },
+  {
+    "name": "cl02",
+    "State": null
+  },
+ ]
+
+ ```
