@@ -19,7 +19,7 @@ Os acessos de usuário são gerenciados externamente via cliente SSO. Aplicaçõ
 
 >'Exaplanação' : O Kublet é o agente em cada um dos nodes que se comunica com o API server no control plane e envia o sinal para o runtime ( Containerd, CRI-O ou Docker em versões mais antigas )
 
-##Kubeconfig
+## Kubeconfig
 
 O centro de permissionamento de nosso clister esta no nosso arquivo Kubeconfig. Esse arquivo fica no home do usuário que tem permissão de execução em nosso cluster. O Kubeconfig é responsável por nos dar contextos de execução. Cada contexto representa um diferente cluster no qual poderá fazer alteração.
 
