@@ -76,7 +76,7 @@ No nosso caso, precisamos de 651 endereços, com /23 temos 512 ips ... um numero
 ```
 az aks create --ressource-group AksDeNoiaCNI \
 --name DrugsOnMeCNI \
---node-count 7 \
+--node-count 20 \
 --network-plugin Azure \
 --vnet-subnet-id "<.. inserir id .. >" \
 --service-cdir 10.80.0.0/22 \
