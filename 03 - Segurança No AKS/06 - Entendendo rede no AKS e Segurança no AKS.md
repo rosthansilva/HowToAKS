@@ -47,7 +47,7 @@ az aks create --ressource-group AksDeNoia \
 ![Kubenet](https://github.com/rosthansilva/HowToAKS/blob/master/img/AzureCNI.png)
 
 
-Com azure AzureCNI cada pod recebe um ip da rede que fica explicito e diretamente acessível.
+Com AzureCNI cada pod recebe um ip da rede que fica explicito e diretamente acessível.
 Cada ip necessita de ser reservado, e gera um esforço de planejamento da rede. Em cenários como esse, os clusters não podem utilizar aos seguintes cdir : 169.254.0.0/16, 172.30.0.0/16, 172.31.0.0/16 ou 192.0.0.0/24 para range de serviço. O Cluster aks necessita de um rbac role de contributor configurado junto a seu service principal.
 
 ### Pros e Cons :
@@ -70,3 +70,20 @@ Acesse [cdir.xyz](https://cidr.xyz/)
 
 Altere o barramento até que tenha a quantidade desejada de endereços :
 No nosso caso, precisamos de 651 endereços, com /23 temos 512 ips ... um numero próximo porém não é o bastante, o que nos diz que o próximo barramento suportará a quantidade de ips. Subindo um octeto a mais temos /22 que por sua vez comporta 1024 ips e é a opção que utilizaríamos em situação real no contexto de ip antes citado.
+
+**Criando AKS com AzureCNI :**
+
+```
+az aks create --ressource-group AksDeNoiaCNI \
+--name DrugsOnMeCNI \
+--node-count 7 \
+--network-plugin Azure \
+--vnet-subnet-id "<.. inserir id .. >" \
+--service-cdir 10.80.0.0/22 \
+--dns-service-ip 172.0.0.40 \
+--docker-briedgr-address 172.16.0.1/16
+--pod-cdir 172.220.0.0/24 \
+--generate-ssh-keys \
+--service-principal "ayuhjsia..." \
+--client-secret "asaqjsia..."
+```
