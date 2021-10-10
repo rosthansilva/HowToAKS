@@ -43,3 +43,30 @@ az aks create --ressource-group AksDeNoia \
 > Service CDIR é onde mora a infra relativa do kubernetes, é nela onde vamos criar nossos loadbalancers e fazer a interação com outros clusteres e ter conexão com o mundo externo. Nela tbm conectamos vpns e serviços de rede.
 
 ## Azure AzureCNI
+
+![Kubenet](https://github.com/rosthansilva/HowToAKS/blob/master/img/AzureCNI.png)
+
+
+Com azure AzureCNI cada pod recebe um ip da rede que fica explicito e diretamente acessível.
+Cada ip necessita de ser reservado, e gera um esforço de planejamento da rede. Em cenários como esse, os clusters não podem utilizar aos seguintes cdir : 169.254.0.0/16, 172.30.0.0/16, 172.31.0.0/16 ou 192.0.0.0/24 para range de serviço. O Cluster aks necessita de um rbac role de contributor configurado junto a seu service principal.
+
+### Pros e Cons :
+
+Como já sitado acima, a administração e planejamento se dificultam. Para uma melhor pratica de rede, quando um noede morre, o release do ip é demorado, então precisamos de um ip livre sempre para que possa ser usado na recriação de outro pod. É necessário que se tenha em mente o tamanho do cluster desejado e faça o seguinte calculo para mensurar sua subnet :
+
+
+```
+Criando um cluster com 20 nodes :
+---------------------------------
+21 x 30
+   +
+  21
+---------------------------------
+651   IPS Necessários na rede
+```
+## Como decidir seu CDIR
+
+Acesse ![cdir.xyz](https://cidr.xyz/)
+
+Altere o barramento até que tenha a quantidade desejada de endereços :
+No nosso caso, precisamos de 651 endereços, com /23 temos 512, um numero próximo porém não é o bastante, o que nos diz que o próximo barramento suportará a quantidade de ips. Subindo um octeto a mais temos /22 que por sua vez comporta 1024 ips e é a opção que utilizaríamos em situação real no contexto de ip antes citado. 
