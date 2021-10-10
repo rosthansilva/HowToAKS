@@ -52,3 +52,5 @@ Vamos criar o seguinte cenário no nosso cluster :
   - Vamos Criar um loadbalance para o Pod web (:80)
 - Vamos separar nosso ambiente em 2 Namespaces ( Kube-system | App )
 - Vamos permitir consultas de DNS do namespace App
+
+> é parte das melhores praticas criar uma politica que bloqueie todo o trafego de entrada e saída do nosso cluster e em seguida liberar o necessário se baseando em tags ( app=Web, app=DB, app=Api )
